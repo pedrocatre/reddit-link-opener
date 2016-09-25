@@ -1,0 +1,14 @@
+{
+  "name": "reddit-link-opener",
+  "version": "1.0.0",
+  "description": "open all reddit post links in new tabs",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Catré",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

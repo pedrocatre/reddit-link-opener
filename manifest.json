@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reddit link opener",
+  "description": "Open all posts in new tabs",
+  "version": "1.0",
+  "page_action": {
+    "default_title": "Open all posts in new tabs",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://reddit.com/*",
+        "https://reddit.com/*",
+        "http://*.reddit.com/*",
+        "https://*.reddit.com/*"
+      ],
+      "js": ["node_modules/jquery/dist/jquery.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ]
+}
